@@ -10,7 +10,14 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.List;
+
+import br.com.thesource.agenda.dao.AlunoDao;
+import br.com.thesource.agenda.modelo.Aluno;
+
 public class AlunosActivity extends AppCompatActivity {
+
+    AlunoDao dao = new AlunoDao(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +25,6 @@ public class AlunosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_alunos);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        String[] alunos = {"Felipe","Jorge","Mauricio","Jorge","Mauricio","Jorge","Mauricio","Jorge","Mauricio","Jorge","Mauricio","Jorge","Mauricio","Jorge","Mauricio"};
-
-        ListView listaAlunos = (ListView) findViewById(R.id.lista_alunos);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, alunos);
-        listaAlunos.setAdapter(adapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -35,4 +36,17 @@ public class AlunosActivity extends AppCompatActivity {
         });
     }
 
+    private void carregaLista() {
+        List<Aluno> alunos = dao.buscaAlunos();
+
+        ListView listaAlunos = (ListView) findViewById(R.id.lista_alunos);
+        ArrayAdapter<Aluno> adapter = new ArrayAdapter<Aluno>(this, android.R.layout.simple_list_item_1, alunos);
+        listaAlunos.setAdapter(adapter);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        carregaLista();
+    }
 }
