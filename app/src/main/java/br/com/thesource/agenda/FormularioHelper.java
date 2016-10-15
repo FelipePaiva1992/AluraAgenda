@@ -18,21 +18,32 @@ public class FormularioHelper{
     private final EditText site;
     private final RatingBar rating;
 
+    private Aluno aluno;
+
     public FormularioHelper(Activity formularioActivity){
         nome = (EditText) formularioActivity.findViewById(R.id.formulario_nome);
         endereco = (EditText) formularioActivity.findViewById(R.id.formulario_endereco);
         telefone = (EditText) formularioActivity.findViewById(R.id.formulario_telefone);
         site = (EditText) formularioActivity.findViewById(R.id.formulario_site);
         rating = (RatingBar) formularioActivity.findViewById(R.id.formulario_rating);
+        aluno = new Aluno();
     }
 
     public Aluno pegaAluno(){
-        Aluno aluno =  new Aluno();
         aluno.setNome(nome.getText().toString());
         aluno.setEndereco(endereco.getText().toString());
         aluno.setTelefone(telefone.getText().toString());
         aluno.setSite(site.getText().toString());
         aluno.setNota(Double.valueOf(rating.getProgress()));
         return aluno;
+    }
+
+    public void preencheFormulario(Aluno aluno) {
+        nome.setText(aluno.getNome());
+        endereco.setText(aluno.getEndereco());
+        telefone.setText(aluno.getTelefone());
+        site.setText(aluno.getSite());
+        rating.setProgress(aluno.getNota().intValue());
+        this.aluno = aluno;
     }
 }
