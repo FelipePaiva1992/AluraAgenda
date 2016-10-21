@@ -13,6 +13,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,6 +25,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import br.com.thesource.agenda.adapter.AlunoAdapter;
+import br.com.thesource.agenda.converter.AlunoConverter;
 import br.com.thesource.agenda.dao.AlunoDao;
 import br.com.thesource.agenda.modelo.Aluno;
 
@@ -152,5 +154,23 @@ public class AlunosActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_lista_alunos,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_enviar_notas:
+                new EnviaAlunosTask(this,content_alunos).execute();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
