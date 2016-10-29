@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="br.com.thesource.agenda.FormularioActivity">
+        tools:context="br.com.code4u.agenda.FormularioActivity">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -35,25 +35,25 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome"
+            android:hint="@string/campo_nome"
             android:id="@+id/formulario_nome"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Endereço"
+            android:hint="@string/campo_endereco"
             android:id="@+id/formulario_endereco"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Telefone"
+            android:hint="@string/campo_telefone"
             android:id="@+id/formulario_telefone"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Site"
+            android:hint="@string/campo_site"
             android:id="@+id/formulario_site"/>
 
         <RatingBar
@@ -67,7 +67,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Salvar"
+            android:hint="@string/btn_salvar"
             android:id="@+id/btnSalvar"/>
 
     </LinearLayout>

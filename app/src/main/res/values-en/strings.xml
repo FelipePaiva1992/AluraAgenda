@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Appointment Book</string>
+    <string name="campo_nome">Name</string>
+    <string name="campo_endereco">Address</string>
+    <string name="campo_telefone">Phone</string>
+    <string name="campo_site">Site</string>
+    <string name="btn_salvar">Save</string>
+    <string name="btn_editar">Edit</string>
+    <string name="title_activity_alunos">Students</string>
+    <string name="title_activity_formulario">Form</string>
+    <string name="title_activity_provas">Exams</string>
+</resources>
