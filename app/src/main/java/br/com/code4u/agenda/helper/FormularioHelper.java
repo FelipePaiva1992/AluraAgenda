@@ -1,4 +1,4 @@
-package br.com.code4u.agenda;
+package br.com.code4u.agenda.helper;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 
+import br.com.code4u.agenda.R;
 import br.com.code4u.agenda.modelo.Aluno;
 
 /**

@@ -1,4 +1,4 @@
-package br.com.code4u.agenda;
+package br.com.code4u.agenda.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import br.com.code4u.agenda.ProvasActivity;
+import br.com.code4u.agenda.R;
 import br.com.code4u.agenda.modelo.Prova;
 
 /**

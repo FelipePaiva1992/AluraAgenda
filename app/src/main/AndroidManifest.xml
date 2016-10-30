@@ -44,7 +44,6 @@
             android:name=".ProvasActivity"
             android:label="@string/title_activity_provas" />
         <activity android:name=".DetalheProvaActivity" />
-        <activity android:name=".ProvaTabletActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

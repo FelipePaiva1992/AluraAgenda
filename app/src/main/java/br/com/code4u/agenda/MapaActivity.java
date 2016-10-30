@@ -5,8 +5,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.google.android.gms.maps.MapsInitializer;
-import com.google.android.gms.maps.SupportMapFragment;
+import br.com.code4u.agenda.fragments.MapaFragment;
 
 public class MapaActivity extends AppCompatActivity {
 

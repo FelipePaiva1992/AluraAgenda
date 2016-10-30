@@ -1,4 +1,4 @@
-package br.com.code4u.agenda;
+package br.com.code4u.agenda.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import br.com.code4u.agenda.R;
 import br.com.code4u.agenda.modelo.Prova;
 
 import static android.R.attr.data;

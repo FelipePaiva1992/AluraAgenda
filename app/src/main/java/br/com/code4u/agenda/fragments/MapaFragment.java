@@ -1,4 +1,4 @@
-package br.com.code4u.agenda;
+package br.com.code4u.agenda.fragments;
 
 import android.location.Address;
 import android.location.Geocoder;
@@ -15,6 +15,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.io.IOException;
 import java.util.List;
 
+import br.com.code4u.agenda.gps.Localizador;
 import br.com.code4u.agenda.dao.AlunoDao;
 import br.com.code4u.agenda.modelo.Aluno;
 

@@ -1,4 +1,4 @@
-package br.com.code4u.agenda;
+package br.com.code4u.agenda.gps;
 
 import android.Manifest;
 import android.content.Context;
